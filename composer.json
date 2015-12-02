@@ -1,0 +1,25 @@
+{
+    "name": "amirhkkh/temp-mail",
+    "type": "library",
+    "description": "PHP API Wrapper for temp-mail.ru service ",
+    "keywords": ["temp-mail", "temporary", "email", "disposable", "temp-mail.org","temp-mail.ru"],
+    "homepage": "https://github.com/amirhkkh/temp-mail",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amir Keshavarz",
+            "email": "amirkekh@gmail.com",
+            "homepage": "https://github.com/amirhkkh",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.0"
+    },
+    "autoload": {
+        "classmap": [
+            "tempmail.class.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
