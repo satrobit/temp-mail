@@ -37,22 +37,22 @@ class tempmail {
 	/**
 	 * Doing request calls for api .
 	 */
-	protected function call($request, $id = null) {
+	protected function call($request, $addressid = null) {
 		switch ($request) {
 			case 'domains' :
-				$url = 'http://api.temp-mail.ru/request/domains/format/json';
+				$target = 'http://api.temp-mail.ru/request/domains/format/json';
 				break;
 			
 			default :
-				$url = 'http://api.temp-mail.ru/request/' . $request . '/id/' . $id . '/format/json';
+				$target = 'http://api.temp-mail.ru/request/' . $request . '/id/' . $addressid . '/format/json';
 				break;
 		}
 		
-		$ch = curl_init ( $url );
-		curl_setopt ( $ch, CURLOPT_HEADER, false );
-		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
-		$result = curl_exec ( $ch );
-		curl_close ( $ch );
+		$handle = curl_init ( $target );
+		curl_setopt ( $handle, CURLOPT_HEADER, false );
+		curl_setopt ( $handle, CURLOPT_RETURNTRANSFER, true );
+		$result = curl_exec ( $handle );
+		curl_close ( $handle );
 		
 		return json_decode ( $result, true );
 	}
@@ -91,14 +91,14 @@ class tempmail {
 	/**
 	 * Deletes an email by the id assigned for each email .
 	 */
-	public function delete($id) {
-		$delete = $this->call ( 'delete', md5 ( $id ) );
+	public function delete($emailid) {
+		$delete = $this->call ( 'delete', md5 ( $emailid ) );
 		
-		if ($delete ['result'] == 'success') {
-			return true;
-		} else {
+		if ($delete ['result'] != 'success') {
 			return false;
 		}
+		
+		return true;
 	}
 	
 	/**
