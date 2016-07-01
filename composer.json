@@ -3,13 +3,13 @@
     "type": "library",
     "description": "PHP API Wrapper for temp-mail.ru service ",
     "keywords": ["temp-mail", "temporary", "email", "disposable", "temp-mail.org","temp-mail.ru"],
-    "homepage": "https://github.com/amirhkkh/temp-mail",
+    "homepage": "https://github.com/satrobit/temp-mail",
     "license": "MIT",
     "authors": [
         {
             "name": "Amir Keshavarz",
             "email": "amirkekh@gmail.com",
-            "homepage": "https://github.com/amirhkkh",
+            "homepage": "https://github.com/satrobit",
             "role": "Developer"
         }
     ],
