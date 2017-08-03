@@ -1,5 +1,5 @@
 {
-    "name": "amirhkkh/temp-mail",
+    "name": "satrobit/temp-mail",
     "type": "library",
     "description": "PHP API Wrapper for temp-mail.ru service ",
     "keywords": ["temp-mail", "temporary", "email", "disposable", "temp-mail.org","temp-mail.ru"],
