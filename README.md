@@ -5,10 +5,10 @@ PHP API wrapper for temp-mail.org
 Add this package to your `composer.json`:
 ```json
 "require": {
-    "amirhkkh/temp-mail": "dev-master"
+    "satrobit/temp-mail": "dev-master"
 }
 ```
 or by command line :
 ```bash
-composer require amirhkkh/temp-mail
+composer require satrobit/temp-mail
 ```
